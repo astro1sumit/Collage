@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+        List<Integer>list=new ArrayList<>();
+        int size=sc.nextInt();
+        while(size>0){
+            list.add(sc.nextInt());
+            size--;
+        }
+        if(!list.isEmpty()){
+            list.remove(list.size()-1);
+            if(list.isEmpty()){
+                System.out.print("null");
+            }                  
+        }
+        else if(list.isEmpty()){
+            System.out.print("null");
+        }
+        
+        for (int element : list) {
+            System.out.print(element + " ");
+        }
+    }
+}
